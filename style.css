@@ -48,8 +48,8 @@ table {
   .user-info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+    align-items:end ;
+    margin-bottom: 10px;
   }
   /*.logoutcontainer {
      Quita cualquier display: none de aquí */
