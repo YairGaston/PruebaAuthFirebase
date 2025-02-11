@@ -1,0 +1,77 @@
+/* Estilos previos... */
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #f4f4f9;
+  }
+  
+  button.editar, button.eliminar {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.editar {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  button.eliminar {
+    background-color: #dc3545;
+    color: white;
+  }
+  #loginContainer {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+  
+  #loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .container {
+    display: none; /* Inicialmente oculto hasta login */
+  }
+  .google-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .google-btn img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .google-btn:hover {
+    background: #f1f1f1;
+  }
