@@ -18,7 +18,7 @@ table {
     background-color: #f4f4f9;
   }
   
-  button.editar, button.eliminar {
+  button.editar, button.eliminar, button.logout-btn, button.guardar-btn {
     padding: 5px 10px;
     margin-right: 5px;
     border: none;
@@ -81,6 +81,6 @@ table {
   .google-btn:hover {
     background: #f1f1f1;
   }
-  .logout-btn .guardar-btn{
+  .logout-btn.guardar-btn{
     cursor: pointer;
   }
