@@ -51,10 +51,14 @@ table {
     align-items: center;
     margin-bottom: 20px;
   }
-  
-  .container {
-    display: none; /* Inicialmente oculto hasta login */
+  .logoutcontainer {
+    /* Quita cualquier display: none de aquí */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
   }
+    /*.container {
+    display: none;  Inicialmente oculto hasta login  } */
   .google-btn {
     display: flex;
     align-items: center;

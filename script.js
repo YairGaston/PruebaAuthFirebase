@@ -1,3 +1,10 @@
+// Verificación de elementos DOM
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Elementos del DOM:');
+  console.log('loginContainer:', loginContainer);
+  console.log('mainContainer:', mainContainer);
+  console.log('formulario:', formulario);
+});
 // Configuración de Firebase
 // const firebaseConfig = {
 //  apiKey: "TU_API_KEY",
@@ -59,6 +66,11 @@ onAuthStateChanged(auth, (user) => {
     mainContainer.style.display = 'block';
     userEmail.textContent = `Usuario: ${user.email}`;
     iniciarEscuchaCambios(); // Tu función para escuchar cambios en Firestore
+// Depuración
+console.log('Usuario autenticado:', user.email);
+console.log('Estado mainContainer:', mainContainer.style.display);
+console.log('Elemento mainContainer:', mainContainer);
+
   } else {
     // Usuario no está logueado
     loginContainer.style.display = 'block';
