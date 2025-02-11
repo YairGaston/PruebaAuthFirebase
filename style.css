@@ -1,5 +1,7 @@
 /* Estilos previos... */
-
+h1{
+  text-align: center;
+}
 table {
     width: 100%;
     margin-top: 20px;
@@ -78,4 +80,7 @@ table {
   
   .google-btn:hover {
     background: #f1f1f1;
+  }
+  .logout-btn .guardar-btn{
+    cursor: pointer;
   }

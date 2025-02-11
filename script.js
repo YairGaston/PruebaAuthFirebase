@@ -49,10 +49,10 @@ onAuthStateChanged(auth, (user) => {
     // Usuario está logueado
     loginContainer.style.display = 'none';
     mainContainer.style.display = 'block';
-    userEmail.textContent = `${user.displayName || user.email}`;
+    userEmail.textContent = `lala ${user.displayName || user.email}`;
     iniciarEscuchaCambios(); // Tu función para escuchar cambios en Firestore
 // Depuración
-console.log('Usuario autenticado:', user.email);
+console.log('Usuario autenticado:', user.displayName || user.email);
 console.log('Estado mainContainer:', mainContainer.style.display);
 console.log('Elemento mainContainer:', mainContainer);
 
