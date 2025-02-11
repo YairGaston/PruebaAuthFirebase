@@ -5,20 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('mainContainer:', mainContainer);
   console.log('formulario:', formulario);
 });
-// Configuración de Firebase
-// const firebaseConfig = {
-//  apiKey: "TU_API_KEY",
-//  authDomain: "TU_AUTH_DOMAIN",
-//  projectId: "TU_PROJECT_ID",
-//  storageBucket: "TU_STORAGE_BUCKET",
-//  messagingSenderId: "TU_MESSAGING_SENDER_ID",
-//  appId: "TU_APP_ID"
-// };
-  
-  // Inicializar Firebase
-  //const app = firebase.initializeApp(firebaseConfig);
-  //const db = firebase.firestore(); 
-
   // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
   import { getFirestore, collection, getDocs, addDoc, deleteDoc, doc, updateDoc, serverTimestamp, onSnapshot } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
@@ -31,11 +17,10 @@ document.addEventListener('DOMContentLoaded', () => {
     onAuthStateChanged 
   } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
   
-  
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
+ // Configuración de Firebase
   const firebaseConfig = {
     apiKey: "AIzaSyCctIitTMSq_Ku7RyMsem4x1Kzl_usg8W4",
     authDomain: "prueba-crud-25ed8.firebaseapp.com",
@@ -51,12 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
 
-const googleLoginBtn = document.getElementById('googleLoginBtn');
-const loginContainer = document.getElementById('loginContainer');
-const mainContainer = document.querySelector('.container');
-const logoutBtn = document.getElementById('logoutBtn');
-const userEmail = document.getElementById('userEmail');
-    let unsubscribeII = null;
+  const googleLoginBtn = document.getElementById('googleLoginBtn');
+  const loginContainer = document.getElementById('loginContainer');
+  const mainContainer = document.querySelector('.container');
+  const logoutBtn = document.getElementById('logoutBtn');
+  const userEmail = document.getElementById('userEmail');
+  let unsubscribeII = null;
 
     // Manejar el estado de autenticación
 onAuthStateChanged(auth, (user) => {
@@ -64,7 +49,7 @@ onAuthStateChanged(auth, (user) => {
     // Usuario está logueado
     loginContainer.style.display = 'none';
     mainContainer.style.display = 'block';
-    userEmail.textContent = `Usuario: ${user.email}`;
+    userEmail.textContent = `${user.displayName || user.email}`;
     iniciarEscuchaCambios(); // Tu función para escuchar cambios en Firestore
 // Depuración
 console.log('Usuario autenticado:', user.email);
@@ -103,25 +88,6 @@ logoutBtn.addEventListener('click', async () => {
     mensaje.textContent = 'Error al cerrar sesión';
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   // Añade este código temporalmente para debug
 async function verificarConexion() {
   try {
@@ -279,6 +245,3 @@ window.addEventListener('unload', () => {
       mensaje.textContent = 'Error al eliminar el registro';
     }
   }
-  
-  // Cargar los registros al iniciar la página
-  //cargarRegistros();

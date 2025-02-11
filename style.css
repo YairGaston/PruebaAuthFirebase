@@ -51,9 +51,9 @@ table {
     align-items: center;
     margin-bottom: 20px;
   }
-  .logoutcontainer {
-    /* Quita cualquier display: none de aquí */
-    max-width: 800px;
+  /*.logoutcontainer {
+     Quita cualquier display: none de aquí */
+    /*max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
