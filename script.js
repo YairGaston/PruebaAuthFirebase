@@ -40,9 +40,9 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
-  const db = getFirestore(app);
 
 const googleLoginBtn = document.getElementById('googleLoginBtn');
 const loginContainer = document.getElementById('loginContainer');
